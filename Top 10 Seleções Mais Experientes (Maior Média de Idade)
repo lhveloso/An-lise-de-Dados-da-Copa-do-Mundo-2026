@@ -1,0 +1,7 @@
+SELECT TOP 10 
+    country, 
+    AVG(age) AS media_idade
+FROM dbo.players_datasets_Stats_FIFA_worldcup2026
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY media_idade DESC;
