@@ -1,0 +1,10 @@
+-- Objetivo: Listar os 5 goleiros mais experientes, com base no número de
+-- partidas internacionais disputadas (international_caps).
+
+SELECT TOP 5
+    player_name,
+    country,
+    international_caps
+FROM dbo.GoalKeeper_datasets_stats_FIFA_Worldcup2026
+WHERE international_caps IS NOT NULL
+ORDER BY international_caps DESC;

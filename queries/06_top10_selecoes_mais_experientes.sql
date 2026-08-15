@@ -1,5 +1,8 @@
-SELECT TOP 10 
-    country, 
+-- Objetivo: Identificar as 10 seleções com a maior média de idade entre os
+-- jogadores de linha convocados.
+
+SELECT TOP 10
+    country,
     AVG(age) AS media_idade
 FROM dbo.players_datasets_Stats_FIFA_worldcup2026
 WHERE country IS NOT NULL
